@@ -59,8 +59,6 @@ namespace HyperionDecompilerv2.Decompiler.Lifter
                             R(A) = register
                             B = ??
                             C = ??
-                            
-                            NOTE: Reverse B and C, even though I haven't found use for them yet.
                         */
 
                         LoadRegister(instruction.A, closure, body);
@@ -85,8 +83,7 @@ namespace HyperionDecompilerv2.Decompiler.Lifter
                             B = ??
                             C = ??
 
-                            NOTE: Reverse B and C, even though I haven't found use for them yet.
-                            Not sure about A either, look back.
+                            NOTE: Not sure, reverse INIT some more.
                         */
 
                         for (int j = 0; j < nargs; ++j)
@@ -150,7 +147,7 @@ namespace HyperionDecompilerv2.Decompiler.Lifter
                             RK(Sub) = encoded
 
                             NOTE: Luau compiler optimization allows 2 indexes in sub 
-                            (calls for name index e.g. game.Players).
+                            (calls for name index e.g. table.foreach).
                          */
 
                         IR.Expression expression = new IR.Global(GetConstant(constants[instruction.Bx]));

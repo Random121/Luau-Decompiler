@@ -161,13 +161,13 @@ namespace HyperionDecompilerv2.Decompiler.Deserializer
                         break;
                     case OpMode.iABx:
                         A = Reader.ReadByte();
-                        short Bx = Reader.ReadInt16();
+                        ushort Bx = Reader.ReadUInt16();
 
                         code.Add(new Instruction(Property, A, Bx));
                         break;
                     case OpMode.iAsBx:
                         A = Reader.ReadByte();
-                        ushort sBx = Reader.ReadUInt16();
+                        short sBx = Reader.ReadInt16();
 
                         code.Add(new Instruction(Property, A, sBx));
                         break;

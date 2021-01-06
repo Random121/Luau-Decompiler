@@ -11,8 +11,8 @@ namespace HyperionDecompilerv2.Decompiler.Deserializer.Models
         public byte A;
         public byte B;
         public byte C;
-        public short Bx;
-        public ushort sBx;
+        public ushort Bx;
+        public short sBx;
 
         public uint sub;
 
@@ -24,14 +24,14 @@ namespace HyperionDecompilerv2.Decompiler.Deserializer.Models
             this.C = C;
         }
 
-        public Instruction(OpProperties Property, byte A, short Bx)
+        public Instruction(OpProperties Property, byte A, ushort Bx)
         {
             this.Property = Property;
             this.A = A;
             this.Bx = Bx;
         }
 
-        public Instruction(OpProperties Property, byte A, ushort sBx)
+        public Instruction(OpProperties Property, byte A, short sBx)
         {
             this.Property = Property;
             this.A = A;

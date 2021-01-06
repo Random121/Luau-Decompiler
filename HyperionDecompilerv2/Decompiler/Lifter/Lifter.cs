@@ -80,8 +80,8 @@ namespace HyperionDecompilerv2.Decompiler.Lifter
 
                         /*
                             A = numparams?
-                            B = ??
-                            C = ??
+                            B = 0
+                            C = 0
 
                             NOTE: Not sure, reverse INIT some more.
                         */
@@ -291,8 +291,7 @@ namespace HyperionDecompilerv2.Decompiler.Lifter
                         RegisterMap[instruction.A] = RegisterMap[instruction.B];
                         break;
                     case OpCode.Return:
-                        if (ret == null)
-                            break;
+                        if (ret == null) break;
 
                         ret.body = new IR.Block(body);
                         break;
